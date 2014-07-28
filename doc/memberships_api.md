@@ -24,7 +24,7 @@ GET /people/:person_id/memberships
     "total": 1,
     "results": [
         {
-            "name": "cool stuff",
+            "name": "premier",
             "person_id": 2,
             "expires_on": null,
             "started_at": "2014-07-21T13:48:51-07:00",
