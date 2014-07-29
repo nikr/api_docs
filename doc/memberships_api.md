@@ -6,14 +6,14 @@
 
 Name | Description | Writeable | Required | Examples
 --- | --- | --- | --- | ---
-name | The name of the membership | Y | Y | my_membership
-person_id | The NationBuilder ID of the person the membership applies to | N | Y | 23
-status | The current status of the membership, or a choice between "active", "grace period", "canceled", or "expired" | Y | N | active
-status_reason | A description of how the membership acquired its current status | Y | N | prompt payment
-expires_on | A timestamp representing when the membership expires | Y | N | 2014-07-21T13:48:51-07:00
-started_at | A timestamp representing when the membership was started | Y | N | 2014-07-21T13:48:51-07:00
-created_at | A timestamp representing when the membership was created | N | N | 2014-07-21T13:48:51-07:00
-updated_at | A timestamp representing when the membership was last modified | N | N | 2014-07-21T13:48:51-07:00
+name | The name of the membership | Y | Y | `"my_membership"`
+person_id | The NationBuilder ID of the person the membership applies to | N | Y | `23`
+status | The current status of the membership, or a choice between "active", "grace period", "canceled", or "expired" | Y | N | `"active"`
+status_reason | A description of how the membership acquired its current status | Y | N | `"prompt payment"`
+expires_on | A timestamp representing when the membership expires | Y | N | `"2014-07-21T13:48:51-07:00"`
+started_at | A timestamp representing when the membership was started | Y | N | `"2014-07-21T13:48:51-07:00"`
+created_at | A timestamp representing when the membership was created | N | N | `"2014-07-21T13:48:51-07:00"`
+updated_at | A timestamp representing when the membership was last modified | N | N | `"2014-07-21T13:48:51-07:00"`
 
 ## Index endpoint
 
