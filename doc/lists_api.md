@@ -128,7 +128,6 @@ Creates an empty list with the given attributes.
   * `name` - the name of the list
   * `slug` - a unique identifier for the list
   * `author_id` - the author of the list
-    * Options: `oldest_first`, `newest_first`, `priority_level`, `street_address`, `last_name`
 
 ### Example
 
