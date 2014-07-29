@@ -25,9 +25,9 @@ GET /people/:person_id/memberships
 
 ### Parameters
 
-* `person_id`
+* `person_id` - The NationBuilder ID of the person the membership action is targeting
 * `page` - the page to return
-* `per_page` - the number of listing to display per page
+* `per_page` - the number of listing to display per page (up to a maximum of 100)
 
 ### Example results
 
@@ -62,7 +62,7 @@ POST /people/:person_id/memberships
 
 ### Parameters
 
-* `person_id`
+* `person_id` - The NationBuilder ID of the person the membership action is targeting
 * `membership` - JSON corresponding to the parameters of the new membership
 
 ### Example results
@@ -114,7 +114,7 @@ PUT /people/:person_id/memberships
 
 ### Parameters
 
-* `person_id`
+* `person_id` - The NationBuilder ID of the person the membership action is targeting
 * `membership` - JSON corresponding to the parameters of the new membership. The `name` parameter must be provided.
 
 ### Example results
@@ -164,7 +164,7 @@ DELETE /people/:person_id/memberships/:membership_name
 
 ### Parameters
 
-* `person_id`
+* `person_id` - The NationBuilder ID of the person the membership action is targeting
 * `membership_name` - the name of the membership to destroy
 
 ### Example usage
@@ -172,3 +172,5 @@ DELETE /people/:person_id/memberships/:membership_name
 ```
 DELETE /people/:person_id/memberships/:membership_name
 ```
+
+Response code: 204
