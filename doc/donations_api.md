@@ -36,7 +36,7 @@ Name                      | Description                                         
 `payment_type_ngp_code`   | code of the [payment type](http://nationbuilder.com/what_are_the_valid_payment_types_for_imports)                          | Y         | Y<sup>4</sup>  | K
 `pledge_id`               | the id of the pledge this donation fulfills.  Pledges are promises received from supporters to donate money in the future. | N         | N              | 129
 `recruiter_name_or_email` | recruiter's name or email address                                                                                          | Y         | N<sup>3</sup>  | Hayden Johns
-`recurring_donation_id`   | an id present if the donation is recurring                                                                                 | N         | N              | 89
+`recurring_donation_id`   | an id present if the donation is recurring                                                                                 | N         | N<sup>6</sup>  | 89
 `succeeded_at`            | timestamp representing when the donation succeeded                                                                         | Y         | N<sup>5</sup>  | 2013-02-21T10:04:15-05:00
 `tracking_code_slug`      | tracking code for this donation                                                                                            | Y         | N              | vip
 `updated_at`              | timestamp representing when the donation was last updated                                                                  | N         | N              | 2014-02-14T14:36:29-05:00
@@ -46,6 +46,7 @@ Name                      | Description                                         
 \[3\]: use the `donor_id` field instead to specify a donor. By specifying any of these fields you override the value of the same field on the donor.<br/>
 \[4\]: default: Cash (C). It is strongly recommended to specify one of these fields.<br/>
 \[5\]: if omitted the donation will be considered failed.
+\[6\]: this field is for internal use only.
 
 These fields are always visible but contain null values unless the Voter addon is enabled:
 
@@ -248,6 +249,7 @@ POST /api/v1/donations
 * A donation is always attached to a donor. Use the Create or Match endpoints on the [People API](http://nationbuilder.com/people_api) to create or find the person who will act as the donor.
 * When creating a donation, the `id` of the donor should be specified in the `donor_id` field.
 * If `donor_id` is specified the following fields are copied from the donor to the donation so there is no need to specify them: `email`, `first_name`, `last_name`, `employer`, `occupation`, `recruiter_id`.
+* Recurring_donation_id should not be set when creating a new donation.
 
 ### Example
 

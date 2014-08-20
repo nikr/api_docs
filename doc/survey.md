@@ -34,6 +34,7 @@ You will receive a response with status 200 and this data:
       "slug": "survey",
       "site_slug": "foobar",
       "name": "Survey",
+      "status": "published",
       "questions": [
         {
           "id": 1,
