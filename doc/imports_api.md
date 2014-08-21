@@ -15,6 +15,7 @@ POST /api/v1/imports
 
 * `type` - "[voter_file](https://github.com/3dna/people_view/blob/imports_documentation/doc/voter_file_import_fields.md)" or "[voting_history](https://github.com/3dna/people_view/blob/imports_documentation/doc/voting_history_import_fields.md)", depending on what fields you wish to import with the file. Note that these import types must be imported separately, and voter history should be imported only after voter file information has processed into the nation you are updating.
 * `file` - a RFC 4648 base 64 encoded version of the contents of the UTF-8 file you wish to import, using the alphabet defined as "URL and Filename safe Base64 Alphabet" by the standard.
+* `is_overwritable` - Set this flag to `true` to overwrite non-empty fields. Default is `false`.
 
 Show Endpoint
 -------------
