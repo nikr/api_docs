@@ -183,7 +183,80 @@ Destroys the indicated list.
 DELETE /api/v1/lists/:id
 ```
 
-Listing Creation Endpoint
+Add People Endpoint
+-------------------
+Adds a list of people to a list asynchronously. After this call returns, you can expect
+the people to be in the list after a few minutes.
+
+### Parameters
+* `people_ids`: A JSON list containing ids of people you want added to the list.
+
+### Example
+
+Issuing this request:
+
+```
+POST https://foobar.nationbuilder.com/api/v1/lists/1/people
+```
+
+with this request body:
+
+```json
+{
+  "people_ids": [1, 2, 3]
+}
+```
+
+Results in a HTTP 204 status code.
+
+Delete People Endpoint
+-------------------
+Deletes a list of people from a list asynchronously. After this call returns, you can expect
+the people to be removed from the list after a few minutes.
+
+### Parameters
+* `people_ids`: A JSON list containing ids of people you want removed from a list.
+
+### Example
+
+Issuing this request:
+
+```
+DELETE https://foobar.nationbuilder.com/api/v1/lists/1/people
+```
+
+with this request body:
+
+```json
+{
+  "people_ids": [1, 2, 3]
+}
+```
+
+Results in a HTTP 204 status code.
+
+Add Tag Endpoint
+-----------------
+Use this endpoint to apply a tag to the people contained in a list.
+Note: this endpoint returns a HTTP 204 status code, but the tag is
+not applied immediately. For larger lists, this operation takes many minutes.
+
+```
+POST /api/v1/lists/:list_id/tag/:tag_name
+```
+
+Remove Tag Endpoint
+-----------------
+Use this endpoint to delete a tag from the people contained in a list.
+Note: this endpoint returns a HTTP 204 status code, but the tag is not deleted
+immediately. For larger lists, this operation takes many minutes.
+
+```
+DELETE /api/v1/lists/:list_id/tag/:tag_name
+```
+
+
+Listing Creation Endpoint (DEPRECATED)
 -------------------------
 Adds a person to a list.
 
@@ -222,30 +295,10 @@ Results in this response:
 }
 ```
 
-Listing Deletion Endpoint
+Listing Deletion Endpoint (DEPRECATED)
 -------------------------
 Deletes a person from a list.
 
 ```
 DELETE /api/v1/lists/:list_id/listings/:id
-```
-
-Add Tag Endpoint
------------------
-Use this endpoint to apply a tag to the people contained in a list.
-Note: this endpoint returns a HTTP 204 status code, but the tag is
-not applied immediately. For larger lists, this operation takes many minutes.
-
-```
-POST /api/v1/lists/:list_id/tag/:tag_name
-```
-
-Remove Tag Endpoint
------------------
-Use this endpoint to delete a tag from the people contained in a list.
-Note: this endpoint returns a HTTP 204 status code, but the tag is not deleted
-immediately. For larger lists, this operation takes many minutes.
-
-```
-DELETE /api/v1/lists/:list_id/tag/:tag_name
 ```
