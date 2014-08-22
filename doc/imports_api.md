@@ -3,7 +3,8 @@ Imports API
 Create and run imports into your nation with this API.
 
 Create/Run Endpoint
----------------
+-------------------
+
 Use this endpoint to import into your nation. This will
 create and enqueue the import to run. Each import should be 50mb or less - please chunk large files and use multiple calls.
 
@@ -20,8 +21,19 @@ POST /api/v1/imports
 Show Endpoint
 -------------
 
-Show the status of an import with this endpoint
+Show the progress status of an import with this endpoint
 
+```
+GET /api/v1/imports/:id
+```
+
+### Parameters
+
+* `id` - The import ID returned by the import create endpoint.
+
+### Example output
+
+```json
 {
   "import": {
     "id": 5,
@@ -31,6 +43,33 @@ Show the status of an import with this endpoint
     }
   }
 }
+```
+
+Result Endpoint
+---------------
+
+Returns the detailed import result of a finished imported.
+
+```
+GET /api/v1/imports/:id/result
+```
+
+### Parameters
+
+* `id` - The import ID returned by the import create endpoint.
+
+### Example Output
+
+```json
+{
+  "result": {
+    "rows_updated": 44,
+    "rows_succeeded": 267,
+    "rows_failed": 54,
+    "failure_csv": "[Base 64 encoded error csv file]"
+  }
+}
+```
 
 Full Example
 ------------
@@ -96,3 +135,21 @@ GET https://foobar.nationbuilder.com/api/v1/imports/5
 ```
 
 Possible statuses you can receive are queued, working, and finished, and more information may be available for you to understand the status of your import.
+
+Once the status has indicated that the import is completed, import results endpoint can be used to retreive import result statistics:
+
+```
+GET /api/v1/imports/5/result
+```
+
+```json
+{
+  "result": {
+    "rows_updated": 44,
+    "rows_succeeded": 267,
+    "rows_failed": 54,
+    "failure_csv": "[Base 64 encoded error csv file]"
+  }
+}
+```
+The `failure_csv` is especially important because it is a Base64 encoded csv file with imported rows removed, and leaving only failed rows along with reason on why this row failed to import.
