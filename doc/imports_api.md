@@ -14,7 +14,7 @@ POST /api/v1/imports
 
 ### Parameters
 
-* `type` - "[voter_file](https://github.com/3dna/people_view/blob/imports_documentation/doc/voter_file_import_fields.md)" or "[voting_history](https://github.com/3dna/people_view/blob/imports_documentation/doc/voting_history_import_fields.md)", depending on what fields you wish to import with the file. Note that these import types must be imported separately, and voter history should be imported only after voter file information has processed into the nation you are updating.
+* `type` - "[people](https://github.com/3dna/people_view/blob/imports_documentation/doc/voter_file_import_fields.md)" or "[voting_history](https://github.com/3dna/people_view/blob/imports_documentation/doc/voting_history_import_fields.md)", depending on what fields you wish to import with the file. Note that these import types must be imported separately, and voter history should be imported only after voter file information has processed into the nation you are updating.
 * `file` - a RFC 4648 base 64 encoded version of the contents of the UTF-8 file you wish to import, using the alphabet defined as "URL and Filename safe Base64 Alphabet" by the standard.
 * `is_overwritable` - Set this flag to `true` to overwrite non-empty fields. Default is `false`.
 
@@ -37,7 +37,7 @@ GET /api/v1/imports/:id
 {
   "import": {
     "id": 5,
-    "type": "voter_file",
+    "type": "people",
     "status": {
       "name": "queued"
     }
@@ -92,7 +92,7 @@ POST https://foobar.nationbuilder.com/api/v1/imports
 ```json
 {
   "import": {
-    "type": "voter_file",
+    "type": "people",
     "file": "Zmlyc3RfbmFtZSxsYXN0X25hbWUKQnlyb24sQW5kZXJzb24K"
   }
 }
@@ -106,7 +106,7 @@ Success on this endpoint will return a 200 response and a JSON response includin
 {
   "import": {
     "id": 5,
-    "type": "voter_file",
+    "type": "people",
     "status": {
       "name": "queued"
     }
@@ -124,7 +124,7 @@ GET https://foobar.nationbuilder.com/api/v1/imports/5
 {
   "import": {
     "id": 5,
-    "type": "voter_file",
+    "type": "people",
     "status": {
       "name": "working",
       "processed": 100,
