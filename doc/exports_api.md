@@ -74,7 +74,7 @@ The `download_url` key contains the location of the exported file.
 Delete Endpoint
 ---------------
 
-Deleteds an export when you no longer needs it.
+Deletes an export when you no longer needs it.
 
 ```
 DELETE /api/v1/exports/:id
