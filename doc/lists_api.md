@@ -185,11 +185,10 @@ DELETE /api/v1/lists/:id
 
 Add People Endpoint
 -------------------
-Adds a list of people to a list asynchronously. After this call returns, you can expect
-the people to be in the list after a few minutes.
+Adds people to a list.
 
 ### Parameters
-* `people_ids`: A JSON list containing ids of people you want added to the list.
+* `people_ids`: A JSON list containing ids of people you want added to the list. Up to 100,000 ids are accepted.
 
 ### Example
 
@@ -207,7 +206,18 @@ with this request body:
 }
 ```
 
-Results in a HTTP 204 status code.
+results in:
+
+```json
+{
+  "id": 1,
+  "name": "my list",
+  "slug": "my-list",
+  "author_id": 2,
+  "sort_order": "oldest_first",
+  "count": 3
+}
+```
 
 Delete People Endpoint
 -------------------
@@ -215,7 +225,7 @@ Deletes a list of people from a list asynchronously. After this call returns, yo
 the people to be removed from the list after a few minutes.
 
 ### Parameters
-* `people_ids`: A JSON list containing ids of people you want removed from a list.
+* `people_ids`: A JSON list containing ids of people you want removed from a list. Up to 100,000 ids are accepted.
 
 ### Example
 
@@ -233,7 +243,18 @@ with this request body:
 }
 ```
 
-Results in a HTTP 204 status code.
+results in:
+
+```json
+{
+  "id": 1,
+  "name": "my list",
+  "slug": "my-list",
+  "author_id": 2,
+  "sort_order": "oldest_first",
+  "count": 0
+}
+```
 
 Add Tag Endpoint
 -----------------
