@@ -103,7 +103,7 @@ Resources
 * `judicial_district` - a district field
 * `labour_region` - a district field
 * `language` - this person’s primary language
-* `last_call_id` - the time and date of the last call to this person
+* `last_call_id` - the id of the last contact to this person
 * `last_contacted_at` - the time and date of the last time this person was contacted  
 * `last_contacted_by` - an abbreviated person resource representing the last user who contacted this person
 * `last_donated_at` - the time and date of this person’s last donation
