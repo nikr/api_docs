@@ -157,6 +157,7 @@ POST https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events
 ```json
 {
   "event": {
+    "status": "drafted", 
     "name": "Fasting Day",
     "intro": "Take the 24hr nofoodchallenge!!!",
     "time_zone": "-07:00",
@@ -167,9 +168,9 @@ POST https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events
       "contact_phone": "1234567890",
       "show_phone": true,
       "contact_email": "contact@venue.com",
+      "email": "contact@venue.com",
       "show_email": true
     },
-    "calendar_id": 3,
     "rsvp_form": {
       "phone": "optional",
       "address": "required",
@@ -186,8 +187,7 @@ POST https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events
         "city": "Pasadena",
         "state": "CA"
       }
-    },
-    shifts: null
+    }
   }
 }
 ```
