@@ -77,8 +77,8 @@ Full Example
 In order to import the following file:
 
 ```
-first_name,last_name
-Byron,Anderson
+id,first_name,last_name
+1,Byron,Anderson
 ```
 
 Attributes available are for the person directly, relation fields such as those for addresses and voting histories need to be prefixed by their relations name, for example: `mailing_address.address1` and `voting_history.vh00p1`
@@ -93,7 +93,7 @@ POST https://foobar.nationbuilder.com/api/v1/imports
 {
   "import": {
     "type": "people",
-    "file": "Zmlyc3RfbmFtZSxsYXN0X25hbWUKQnlyb24sQW5kZXJzb24K"
+    "file": "aWQsZmlyc3RfbmFtZSxsYXN0X25hbWUNCjEsQnlyb24sQW5kZXJzb24"
   }
 }
 ```
