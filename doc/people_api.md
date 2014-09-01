@@ -1034,6 +1034,20 @@ GET /api/v1/people/search
 * `updated_since` - people updated since the given date
 * `with_mobile` - only people with mobile phone numbers
 * `custom_values` - match custom field values. It takes a nested format, e.g. `{"custom_values": {"my_field_slug": "abcd"}}`. In the query string this parameter would have to be encoded as `custom_values%5Bmy_field_slug%5D=abcd`.
+* `civicrm_id` - civicrm_id of the person to match
+* `county_file_id` - county_file_id of the person to match
+* `state_file_id` - state_file_id of the person to match
+* `datatrust_id` - datatrust_id of the person to match
+* `dw_id` - dw_id of the person to match
+* `media_market_id` - media_market_id of the person to match
+* `membership_level_id` - membership_level_id of the person to match
+* `ngp_id` - ngp_id of the person to match
+* `pf_strat_id` - pf_strat_id of the person to match
+* `van_id` - van_id of the person to match
+* `salesforce_id` - salesforce_id of the person to match
+* `rnc_id` - rnc_id of the person to match
+* `rnc_regid` - rnc_regid of the person to match
+* `external_id` - external_id of the person to match.
 * `page` - page number (default: 1)
 * `per_page` - number of results to show per page (default: 10, max: 100)
 
