@@ -144,8 +144,7 @@ With this post body:
   "list": {
     "name": "My List",
     "slug": "mylist",
-    "author_id": 17736,
-    "sort_order": "oldest_first"
+    "author_id": 17736
   }
 }
 ```
@@ -154,12 +153,12 @@ Should result in this response:
 
 ```json
 {
-  "list": {
+  "list_resource": {
     "id": 12,
     "name": "My List",
     "slug": "mylist",
     "author_id": 17736,
-    "sort_order": "oldest_first",
+    "sort_order": "street_address",
     "count": 0
   }
 }
