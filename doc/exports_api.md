@@ -20,6 +20,13 @@ POST /api/v1/lists/:list_id/exports
 
 * `context` - "people" or "households".
 
+```json
+{
+  "export": {
+    "context": "people"
+  }
+}
+```
 
 Show Endpoint
 -------------
