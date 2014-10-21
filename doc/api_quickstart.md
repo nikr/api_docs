@@ -8,7 +8,7 @@ NationBuilder URL, joeyforprez.nationbuilder.com. This cannot be changed; we
 recommend using your organization or company name. You will get a response with
 within one working day.
 
-If you want to begin testing the API from your own nation or are building an app for a single customer, you can use test tokens to get started immediately. In your nation's control panel, go to Settings > Apps > Test tokens.
+If you want to begin testing the API from your own nation or are building an app for a single customer, you can use test tokens to get started immediately. In your nation's control panel, go to Settings > Developer > API token.
 
 These are the steps necessary to start using the API to access resources through OAuth:
 
