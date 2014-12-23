@@ -180,7 +180,7 @@ Resources
 * `support_level` - the level of support this person has for your nation, expressed as a number between 1 and 5, 1 being Strong support, 5 meaning strong opposition, and 3 meaning undecided.
 * `support_probability_score` - the likelihood that this person will support you at election time
 * `supranational_district` - district field
-* `tags` - the tags assigned to this person, as an array of strings - setting via this API has been deprecated, use the [people tags API](http://nationbuilder.com/people_tags_api)
+* `tags` - the tags assigned to this person, as an array of strings
 * `turnout_probability_score` - the probability that this person will turn out to vote
 * `twitter_address` - this person’s location based on their Twitter profile
 * `twitter_description` - the description that this person provided in their Twitter profile
@@ -253,7 +253,7 @@ Resources
 * `state_upper_district` - district field
 * `support_level` - the level of support this person has for your nation, expressed as a number between 1 and 5, 1 being Strong support, 5 meaning strong opposition, and 3 meaning undecided.
 * `supranational_district` - district field
-* `tags` - the tags assigned to this person, as an array of strings - setting via this API has been deprecated, use the [people tags API](http://nationbuilder.com/people_tags_api)
+* `tags` - the tags assigned to this person, as an array of strings
 * `twitter_id` - this person’s ID from Twitter
 * `twitter_name` - this person’s Twitter handle, e.g. FoobarSoftwares
 * `updated_at` - the timestamp representing when this person was last updated
@@ -2683,6 +2683,78 @@ You will receive a response of status 200 and a body like this:
     "work_phone_number": null
   },
   "precinct": null
+}
+```
+
+Taggings
+--------
+
+This endpoint returns all tags applied to a person.
+
+```
+GET /api/v1/people/:person_id/taggings
+```
+
+Tag Person
+----------
+
+This endpoint applies one or more tags to a person.
+
+```
+PUT /api/v1/people/:person_id/taggings
+```
+
+### Example request bodies
+
+```json
+{
+  "tagging": {
+    "tag": "my_tag"
+  }
+}
+```
+
+```json
+{
+  "tagging": {
+    "tag": ["my_tag1", "my_tag2"]
+  }
+}
+```
+
+Tag Removal
+----------
+
+This endpoint removes a single tag from a person.
+
+```
+DELETE /api/v1/people/:person_id/taggings/:tag_name
+```
+
+Batch Tag Removal
+----------
+
+This endpoint removes one or more tags from a person.
+
+```
+DELETE /api/v1/people/:person_id/taggings
+```
+
+### Example request bodies
+
+```json
+{
+  "tagging": {
+    "tag": "my_tag"
+  }
+}
+```
+
+```json
+{
+  "tagging": {
+    "tag": ["my_tag1", "my_tag2"]
+  }
 }
 ```
 
