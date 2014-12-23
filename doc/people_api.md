@@ -25,7 +25,7 @@ Resources
 * `city_sub_district` - district field
 * `civicrm_id` - this person’s ID from CiviCRM
 * `closed_invoices_amount_in_cents` - the aggregate amount of all this person’s closed invoices in cents
-* `closed_invoices_count` - the number of closed invoices associated with this person 
+* `closed_invoices_count` - the number of closed invoices associated with this person
 * `contact_status_id` - ID of a contact status associated with this person. Possible values: 1: answered, 2: bad_info, 9: inaccessible, 3: left_message, 4: meaningful_interaction, 6: not_interested, 7: no_answer, 8: refused, 5: send_information, 0: other
 * `contact_status_name` - name of a contact status associated with this person: Possible values: answered, bad_info, inaccessible, left_message, meaningful_interaction, not_interested, no_answer, refused, send_information, other
 * `could_vote_status` - boolean indicating if this person could vote in an election or not, derived from their election-related IDs
@@ -35,8 +35,8 @@ Resources
 * `demo` - Asian, Black, Hispanic, White, Other, Unknown
 * `do_not_call` - this is a boolean flag that lets us know if this person is on a do not call list
 * `do_not_contact` - this is a boolean flag that lets us know if this person is on a do not contact list
-* `donations_amount_in_cents` - aggregate amount of all this person’s donations in cents 
-* `donations_amount_this_cycle_in_cents` - the aggregate value of the donations this person made this cycle in cents 
+* `donations_amount_in_cents` - aggregate amount of all this person’s donations in cents
+* `donations_amount_this_cycle_in_cents` - the aggregate value of the donations this person made this cycle in cents
 * `donations_count_this_cycle` - the number of donations this person made this cycle
 * `donations_count` - the total number of donations made by this person
 * `donations_pledged_amount_in_cents` - the aggregate amount of the donations pledged by this person in cents
@@ -44,7 +44,7 @@ Resources
 * `donations_raised_amount_this_cycle_in_cents` - the aggregate value of all donations raised this cycle by this person, including their own
 * `donations_raised_count_this_cycle` - the number of donations raised this cycle by this person, including their own
 * `donations_raised_count` - the total number of donations raised
-* `donations_to_raise_amount_in_cents` - the goal amount of donations for this person to raise in cents 
+* `donations_to_raise_amount_in_cents` - the goal amount of donations for this person to raise in cents
 * `dw_id` - this person’s ID from Catalist
 * `email1_is_bad` - boolean indicating if email1 for this person is bad
 * `email1` - an email address for this person
@@ -71,10 +71,10 @@ Resources
 * `first_fundraised_at` -  date and time that this person first raised donation
 * `first_invoice_at` - date and time of this person's first invoice
 * `first_name` - the person's first name and middle names
-* `first_prospect_at` - date and time that this user first became a prospect 
+* `first_prospect_at` - date and time that this user first became a prospect
 * `first_recruited_at` - date and time that this user was first recruited
 * `first_supporter_at` - date and time that this user became a supporter for the first time
-* `first_volunteer_at` - date and time that this person first volunteered 
+* `first_volunteer_at` - date and time that this person first volunteered
 * `full_name` - this person’s full name
 * `has_facebook` - a boolean representing whether this person has Facebook information
 * `home_address` - an address resource representing the home address
@@ -88,13 +88,13 @@ Resources
 * `invoices_count` - the number of invoices this person has
 * `is_deceased` - a boolean field that indicates if the person is alive or not
 * `is_donor` - a boolean field that indicates if the person has donated
-* `is_fundraiser` - a boolean value that indicates if this person has previously fundraised 
+* `is_fundraiser` - a boolean value that indicates if this person has previously fundraised
 * `is_ignore_donation_limits` - a boolean that indicates whether this person is not subject to donation limits associated with the nation
 * `is_leaderboardable` - a boolean that tells if this person is allowed to show up on the leaderboard
 * `is_mobile_bad` - a boolean reflecting whether this person’s cell number is invalid
 * `is_possible_duplicate` - a boolean field that indicates if the NationBuilder matching algorithm thinks this person is a match to someone else in the nation
 * `is_profile_private` - a boolean that tells if this person’s profile is private
-* `is_profile_searchable` - a boolean that tells if this person’s profile is allowed to show up in search results 
+* `is_profile_searchable` - a boolean that tells if this person’s profile is allowed to show up in search results
 * `is_prospect` - a boolean field that indicates if this person is a prospect
 * `is_supporter` - a boolean field that indicates if this person is a supporter
 * `is_survey_question_private` - a boolean field that indicates if this person’s survey responses are private
@@ -104,10 +104,10 @@ Resources
 * `labour_region` - a district field
 * `language` - this person’s primary language
 * `last_call_id` - the id of the last contact to this person
-* `last_contacted_at` - the time and date of the last time this person was contacted  
+* `last_contacted_at` - the time and date of the last time this person was contacted
 * `last_contacted_by` - an abbreviated person resource representing the last user who contacted this person
 * `last_donated_at` - the time and date of this person’s last donation
-* `last_fundraised_at` - the time and date of the last time this person fundraised 
+* `last_fundraised_at` - the time and date of the last time this person fundraised
 * `last_invoice_at` - the time and date of this person’s last invoice
 * `last_name` - this person's last name
 * `last_rule_violation_at` - the time and date of this person’s last rule violation
@@ -117,8 +117,8 @@ Resources
 * `mailing_address` - an address resource representing the mailing address
 * `marital_status` - the person’s [marital status](http://nationbuilder.com/what_are_the_codes_for_marital_status_on_imports)
 * `media_market_name` - the name of this person’s media market
-* `meetup_address` - an address resource based on this person’s profile in Meetup  
-* `membership_expires_at` - the time and date that this user’s membership expires 
+* `meetup_address` - an address resource based on this person’s profile in Meetup
+* `membership_expires_at` - the time and date that this user’s membership expires
 * `membership_level_name` - the name of the level of this person’s membership
 * `membership_started_at` - the time and date that this user started a membership
 * `middle_name` - this person’s middle name
@@ -155,7 +155,7 @@ Resources
 * `profile_content_html` - the profile content for this person’s public profile in HTML
 * `profile_content` - the content for this person’s public profile
 * `profile_headline` - the headline for this person’s public profile
-* `received_capital_amount_in_cents` - the aggregate amount of political capital ever received by this person 
+* `received_capital_amount_in_cents` - the aggregate amount of political capital ever received by this person
 * `recruiter_id` - the ID of the person who recruited this person
 * `recruiter` - an abbreviated person resource representing the person who recruited this person
 * `recruits_count` - the number of people that were recruited by this person
@@ -169,22 +169,22 @@ Resources
 * `school_district` - a district field
 * `school_sub_district` - a district field
 * `sex` - this person's gender (M, F or O)
-* `spent_capital_amount_in_cents` - the aggregate amount of capital ever spent by this person (in cents) 
+* `spent_capital_amount_in_cents` - the aggregate amount of capital ever spent by this person (in cents)
 * `state_file_id` - this person’s ID from a state voter file
 * `state_lower_district` - a district field
 * `state_upper_district` - a district field
 * `submitted_address` - the address this person submitted
-* `subnations` - an array of subnations that this person belongs to 
+* `subnations` - an array of subnations that this person belongs to
 * `suffix` - the suffix this person uses w/their name, i.e. Jr., Sr. or III
-* `support_level_changed_at` - the time and date that this person’s support level changed 
+* `support_level_changed_at` - the time and date that this person’s support level changed
 * `support_level` - the level of support this person has for your nation, expressed as a number between 1 and 5, 1 being Strong support, 5 meaning strong opposition, and 3 meaning undecided.
 * `support_probability_score` - the likelihood that this person will support you at election time
 * `supranational_district` - district field
-* `tags` - the tags assigned to this person, as an array of strings - setting via this API has been deprecated, use the [people tags API](http://nationbuilder.com/people_tags_api)
+* `tags` - the tags assigned to this person, as an array of strings
 * `turnout_probability_score` - the probability that this person will turn out to vote
 * `twitter_address` - this person’s location based on their Twitter profile
 * `twitter_description` - the description that this person provided in their Twitter profile
-* `twitter_followers_count` - the number of followers this person has on Twitter 
+* `twitter_followers_count` - the number of followers this person has on Twitter
 * `twitter_friends_count` - the number of friends this person has on Twitter
 * `twitter_id` - this person’s ID from Twitter
 * `twitter_location` - an address resource representing this person’s address based on Twitter’s location data
@@ -253,7 +253,7 @@ Resources
 * `state_upper_district` - district field
 * `support_level` - the level of support this person has for your nation, expressed as a number between 1 and 5, 1 being Strong support, 5 meaning strong opposition, and 3 meaning undecided.
 * `supranational_district` - district field
-* `tags` - the tags assigned to this person, as an array of strings - setting via this API has been deprecated, use the [people tags API](http://nationbuilder.com/people_tags_api)
+* `tags` - the tags assigned to this person, as an array of strings
 * `twitter_id` - this person’s ID from Twitter
 * `twitter_name` - this person’s Twitter handle, e.g. FoobarSoftwares
 * `updated_at` - the timestamp representing when this person was last updated
@@ -473,7 +473,7 @@ You will receive a response of status 200, with response body like this:
     "county_file_id": "mycountyfileid",
     "created_at": "2014-02-02T11:51:23-05:00",
     "do_not_call": false,
-    "do_not_contact": false,    
+    "do_not_contact": false,
     "dw_id": 987,
     "email": "test@example.com",
     "email_opt_in": true,
@@ -1958,7 +1958,20 @@ You will receive a response of status 201, with response body like this:
 Push Endpoint
 -------------
 
-This endpoint updates a person matched, or creates if no match is found.  Matches are found exclusively by email address or external ID.
+This endpoint attempts to match the input person resource to a person already in the nation. If
+a match is found, the matched person is updated. If a match is not found, a new person is created.
+Matches are found by including one of the following IDs in the request:
+
+* `civicrm_id`
+* `county_file_id`
+* `dw_id`
+* `external_id`
+* `email`
+* `facebook_username`
+* `ngp_id`
+* `salesforce_id`
+* `twitter_login`
+* `van_id`
 
 ```
 PUT /api/v1/people/push
@@ -2670,6 +2683,78 @@ You will receive a response of status 200 and a body like this:
     "work_phone_number": null
   },
   "precinct": null
+}
+```
+
+Taggings
+--------
+
+This endpoint returns all tags applied to a person.
+
+```
+GET /api/v1/people/:person_id/taggings
+```
+
+Tag Person
+----------
+
+This endpoint applies one or more tags to a person.
+
+```
+PUT /api/v1/people/:person_id/taggings
+```
+
+### Example request bodies
+
+```json
+{
+  "tagging": {
+    "tag": "my_tag"
+  }
+}
+```
+
+```json
+{
+  "tagging": {
+    "tag": ["my_tag1", "my_tag2"]
+  }
+}
+```
+
+Tag Removal
+----------
+
+This endpoint removes a single tag from a person.
+
+```
+DELETE /api/v1/people/:person_id/taggings/:tag_name
+```
+
+Batch Tag Removal
+----------
+
+This endpoint removes one or more tags from a person.
+
+```
+DELETE /api/v1/people/:person_id/taggings
+```
+
+### Example request bodies
+
+```json
+{
+  "tagging": {
+    "tag": "my_tag"
+  }
+}
+```
+
+```json
+{
+  "tagging": {
+    "tag": ["my_tag1", "my_tag2"]
+  }
 }
 ```
 
