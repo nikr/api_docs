@@ -87,10 +87,7 @@ Array
 (
     [result] => Array
         (
-            [page] => 1
-            [total_pages] => 1
-            [per_page] => 10
-            [total] => 9
+            [next] => /api/v1/people?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m
             [results] => Array
                 (
                     [0] => Array

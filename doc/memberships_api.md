@@ -26,17 +26,16 @@ GET /people/:person_id/memberships
 ### Parameters
 
 * `person_id` - The NationBuilder ID of the person the membership action is targeting
-* `page` - the page to return
-* `per_page` - the number of listing to display per page (up to a maximum of 100)
+* `limit` - max number of results to show in one page of results (default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 ### Example results
 
 ```json
 {
-    "page": 1,
-    "total_pages": 1,
-    "per_page": 10,
-    "total": 1,
+  "next": "/people/213/memberships?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m&limit=1",
+  "prev": null,
     "results": [
         {
             "name": "premier",

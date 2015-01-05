@@ -11,23 +11,22 @@ Retrieve a paginated list of existing surveys
 
 ### Parameters
 
-* `page` - The page number, defaults to 0
-* `per_page` - Number of entries to display, defaults to 10
+* `limit` - max number of results to show in one page of results (default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 ### Example
 
 ```
-GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/surveys?page=1&per_page=2
+GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/surveys
 ```
 
 You will receive a response with status 200 and this data:
 
 ```json
 {
-  "page": 1,
-  "total_pages": 1,
-  "per_page": 2,
-  "total": 1,
+  "next": "/api/v1/sites/foobar/pages/surveys?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m",
+  "prev": null,
   "results": [
     {
       "id": 1,
@@ -356,8 +355,9 @@ GET /api/v1/survey_responses
 ```
 
 ### Parameters
-* `page` - page number
-* `per_page` - number of results to show per-page
+* `limit` - max number of results to show in one page of results (default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 * `start_time` - starting time for results, in [unix time](http://en.wikipedia.org/wiki/Unix_time)
 * `end_time` - ending time for results, also in unix time
 * `survey_id` - scope the responses to just those made for a specific survey
@@ -370,10 +370,8 @@ GET https://foobar.nationbuilder.com/api/v1/survey_responses
 
 ```json
 {
-  "page": 1,
-  "total_pages": 1,
-  "per_page": 10,
-  "total": 2,
+  "next": "/api/v1/survey_responses?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m",
+  "prev": null,
   "results": [
     {
       "id": 2,

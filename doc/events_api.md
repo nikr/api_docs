@@ -8,8 +8,9 @@ Use this endpoint to list the events stored in the nation
 GET /api/v1/sites/:site_slug/pages/events
 
 ### Parameters
-* page - page number
-* per_page - number of results to show per page
+* `limit` - max number of results to show per page
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 * tags - tags present on events returned
 * starting - earliest start time for events returned (inclusive)
 * until - latest end time for events returned (exclusive)
@@ -23,10 +24,8 @@ GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events?starting=2
 
 ```json
 {
-  "page": 1,
-  "total_pages": 1,
-  "per_page": 10,
-  "total": 2,
+  "next": "/api/v1/sites/foobar/pages/events?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m&starting=2013-03-01",
+  "prev": null,
   "results": [
     {
       "id": 5,
@@ -157,7 +156,7 @@ POST https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/events
 ```json
 {
   "event": {
-    "status": "drafted", 
+    "status": "drafted",
     "name": "Fasting Day",
     "intro": "Take the 24hr nofoodchallenge!!!",
     "time_zone": "-07:00",
@@ -271,8 +270,10 @@ Use this endpoint to list the RSVPs for an event
 GET /api/v1/sites/:site_slug/pages/events/:event_id/rsvps
 
 ### Parameters
-* page - page number (optional, default 1)
-* per_page - number of results to show per page (optional, default 10, max 100)
+
+* `limit` - max number of results to show per page (optional, default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 ### Example
 
@@ -286,10 +287,8 @@ Should get you a response like this:
 
 ```json
 {
-  "page": 1,
-  "total_pages": 1,
-  "per_page": 10,
-  "total": 1,
+  "next": "/api/v1/sites/foobar/pages/events/1/rsvps?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m",
+  "prev": null,
   "results": [
     {
       "id": 2,

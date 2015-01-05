@@ -95,21 +95,20 @@ GET /api/v1/donations
 ```
 
 ### Parameters
-* `page` - result page number
-* `per_page` - number of results to show on each page of results (max 100)
+* `limit` - max number of results to show on each page of results (max 100)
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 ### Example
 
 ```
-GET https://foobar.nationbuilder.com/api/v1/donations?page=2&per_page=1
+GET https://foobar.nationbuilder.com/api/v1/donations?limit=1
 ```
 
 ```json
 {
-  "page": 2,
-  "total_pages": 3,
-  "per_page": 1,
-  "total": 3,
+  "next": "/api/v1/donations?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m&limit=1",
+  "prev": null,
   "results": [
       {
           "actblue_order_number": null,

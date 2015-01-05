@@ -284,21 +284,20 @@ GET /api/v1/people
 ```
 
 ### Parameters
-* `page` - result page number
-* `per_page` - number of results to return (max 100)
+* `limit` - max number of results to show in one page of results (default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 ### Example
 
 ```
-GET https://foobar.nationbuilder.com/api/v1/people?page=2
+GET https://foobar.nationbuilder.com/api/v1/people
 ```
 
 ```json
 {
-  "page": 2,
-  "total_pages": 2,
-  "per_page": 10,
-  "total": 12,
+  "next": "/api/v1/people?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m",
+  "prev": null,
   "results": [
     {
       "birthdate": "1973-04-04",
@@ -1048,8 +1047,9 @@ GET /api/v1/people/search
 * `rnc_id` - rnc_id of the person to match
 * `rnc_regid` - rnc_regid of the person to match
 * `external_id` - external_id of the person to match.
-* `page` - page number (default: 1)
-* `per_page` - number of results to show per page (default: 10, max: 100)
+* `limit` - max number of results to show in one page of results (default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 ### Example
 
@@ -1063,10 +1063,8 @@ Should give you a response like this:
 
 ```json
 {
-  "page": 1,
-  "total_pages": 1,
-  "per_page": 10,
-  "total": 1,
+  "next": "/api/v1/people/search?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m&first_name=Byron&city=Beverly%20Hills&state=CA",
+  "prev": null,
   "results": [
     {
       "birthdate": "1973-04-04",
@@ -1149,8 +1147,9 @@ GET /api/v1/people/nearby
 ### Parameters
 * `location` - origin of search in the format latitude,longitude (required)
 * `distance` - the radius in miles for which to include results (optional, default: 1 mile)
-* `page` - page number (default: 1)
-* `per_page` - number of results to show per page (default: 10, max: 100)
+* `limit` - max number of results to show in one page of results (default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 ### Example
 
@@ -1164,10 +1163,8 @@ You should receive a response like this:
 
 ```
 {
-  "page": 1,
-  "total_pages": 1,
-  "per_page": 10,
-  "total": 1,
+  "next": "/api/v1/people/nearby?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m&location=34.0522,-118.2428&distance=1",
+  "prev": null,
   "results": [
     {
       "birthdate": "1973-04-04",

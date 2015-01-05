@@ -18,8 +18,9 @@ Returns a paginated list of the webhooks the nation has already registered with 
 
 ### Attributes
 
-* `page` - page number
-* `per_page` - the number of results to show per page (default 10, max 100)
+* `limit` - max number of results to show in one page of results (default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 
 ### Example
@@ -32,10 +33,8 @@ Should get you a 200 response with body like this:
 
 ```json
 {
-  "page": 1,
-  "total_pages": 1,
-  "per_page": 10,
-  "total": 1,
+  "next": "/api/v1/webhooks?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m",
+  "prev": null,
   "results": [
     {
       "id": "51f6d14dba6d1d31c0000003",
