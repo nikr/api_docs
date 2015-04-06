@@ -3,12 +3,17 @@ Webhooks API
 
 Use the webhooks API to manage callback requests that you wish to receive on the following types of events:
 
-* Person creation - "person_creation"
-* Person update - "person_update"
-* Person contact - "person_contact"
-* Donation success - "donation_success"
-* Donation update - "donation_update"
-* Donation cancelation - "donation_cancellation"
+* Person created - "person_created"
+* Person changed - "person_changed"
+* Person contacted - "person_contacted"
+* Person destroyed - "person_destroyed"
+* Person tagged - "person_tagged"
+* Person untagged - "person_untagged"
+* Person merged - "person_merged"
+* People destroyed in batch - "people_destroyed"
+* Donation succeeded - "donation_succeeded"
+* Donation changed - "donation_changed"
+* Donation canceled - "donation_canceled"
 
 Each webhook instance has a single URL and event type. A webhook sends an HTTP POST with a message body containing data about the person or donation created. The POST is sent to the URL whenever the event occurs.
 
