@@ -17,8 +17,9 @@ Use the index endpoint to get a paginated list of the precincts in the nation.
 This data can be used in the people API to attach a precinct to a person.
 
 ### Parameters
-* `page` - result page number
-* `per_page` - number of results to return (max 100)
+* `limit` - max number of results to show in one page of results (default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 ```
 GET /api/v1/precincts
@@ -32,10 +33,8 @@ GET https://foobar.nationbuilder.com/api/v1/precincts
 
 ```json
 {
-  "page": 1,
-  "total_pages": 50,
-  "per_page": 10,
-  "total": 497,
+  "next": "/api/v1/precincts?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m",
+  "prev": null,
   "results": [
     {
       "id": 1,

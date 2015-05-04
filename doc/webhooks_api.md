@@ -3,12 +3,19 @@ Webhooks API
 
 Use the webhooks API to manage callback requests that you wish to receive on the following types of events:
 
-* Person creation - "person_creation"
-* Person update - "person_update"
-* Person contact - "person_contact"
-* Donation success - "donation_success"
-* Donation update - "donation_update"
-* Donation cancelation - "donation_cancellation"
+| Name                      | ID                    |
+|---------------------------|-----------------------|
+| Person created            | `person_created`      |
+| Person changed            | `person_changed`      |
+| Person contacted          | `person_contacted`    |
+| Person destroyed          | `person_destroyed`    |
+| Person tagged             | `person_tagged`       |
+| Person untagged           | `person_untagged`     |
+| Person merged             | `person_merged`       |
+| People destroyed in batch | `people_destroyed`    |
+| Donation succeeded        | `donation_succeeded`  |
+| Donation changed          | `donation_changed`    |
+| Donation canceled         | `donation_canceled`   |
 
 Each webhook instance has a single URL and event type. A webhook sends an HTTP POST with a message body containing data about the person or donation created. The POST is sent to the URL whenever the event occurs.
 
@@ -18,8 +25,9 @@ Returns a paginated list of the webhooks the nation has already registered with 
 
 ### Attributes
 
-* `page` - page number
-* `per_page` - the number of results to show per page (default 10, max 100)
+* `limit` - max number of results to show in one page of results (default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 
 ### Example
@@ -32,10 +40,8 @@ Should get you a 200 response with body like this:
 
 ```json
 {
-  "page": 1,
-  "total_pages": 1,
-  "per_page": 10,
-  "total": 1,
+  "next": "/api/v1/webhooks?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m",
+  "prev": null,
   "results": [
     {
       "id": "51f6d14dba6d1d31c0000003",

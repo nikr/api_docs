@@ -10,8 +10,9 @@ GET /api/v1/sites/:site_slug/pages/:page_slug/attachments
 ```
 
 ### Parameters
-* page - page number
-* per_page - number of results to display per page (max 100)
+* `limit` - max number of results to show in one page of results (default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 ### Example
 
@@ -21,10 +22,8 @@ GET https://foobar.nationbuilder.com/api/v1/sites/foobar/pages/blog/attachments
 
 ```json
 {
-  "page": 1,
-  "total_pages": 1,
-  "per_page": 10,
-  "total": 2,
+  "next": null,
+  "prev": null,
   "results": [
     {
       "id": 6,

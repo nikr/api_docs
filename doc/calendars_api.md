@@ -8,8 +8,9 @@ Use this endpoint to view the calendars a nation maintains.
 GET /api/v1/sites/:site_slug/pages/calendars
 
 ### Parameters
-* page - page number
-* per_page - number of results to show per page
+* `limit` - max number of results to show in one page of results (default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 ### Example
 
@@ -19,10 +20,8 @@ GET https://foobar.nationbuilder.com/api/v1/foobar/pages/calendars
 
 ```json
 {
-  "page": 1,
-  "total_pages": 1,
-  "per_page": 10,
-  "total": 2,
+  "next": "/api/v1/foobar/pages/calendars?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m",
+  "prev": null,
   "results": [
     {
       "id": 1,

@@ -8,8 +8,9 @@ Show a list of the blogs in the system
 GET /api/v1/sites/:site_slug/pages/blogs
 
 ### Attributes
-* page - page number
-* per_page - number of results to display per page (max 100)
+* `limit` - max number of results to show in one page of results (default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 ### Example
 
@@ -23,10 +24,8 @@ Then you should get a 200 response with a body like this:
 
 ```json
 {
-  "page": 1,
-  "total_pages": 1,
-  "per_page": 10,
-  "total": 2,
+  "next": "/api/v1/sites/foobar/pages/blogs?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m",
+  "prev": null,
   "results": [
     {
       "slug": "mindsell",

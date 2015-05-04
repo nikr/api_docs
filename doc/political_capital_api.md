@@ -24,21 +24,20 @@ GET /api/v1/people/:id/capitals
 ```
 
 ### Parameters
-* `page` - result page number
-* `per_page` - number of results to return (max 100)
+* `limit` - max number of results to show in one page of results (default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 ### Example
 
 ```
-GET https://foobar.nationbuilder.com/api/v1/people/9/capitals?page=1
+GET https://foobar.nationbuilder.com/api/v1/people/9/capitals
 ```
 
 ```json
 {
-  "page": 1,
-  "total_pages": 1,
-  "per_page": 10,
-  "total": 1,
+  "next": "/api/v1/people/9/capitals?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m",
+  "prev": null,
   "results": [
     {
       "id": "3",

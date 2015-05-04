@@ -15,8 +15,9 @@ GET /api/v1/lists
 ```
 
 ### Parameters
-* `page` - page number
-* `per_page` - number of results to show in one page of results (default 10, max 100)
+* `limit` - max number of results to show in one page of results (default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 ### Example
 
@@ -30,10 +31,8 @@ Should result in this response:
 
 ```json
 {
-  "page": 1,
-  "total_pages": 1,
-  "per_page": 10,
-  "total": 3,
+  "next": "/api/v1/lists?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m",
+  "prev": null,
   "results": [
     {
       "id": 2,
@@ -73,8 +72,9 @@ GET /api/v1/lists/:id/people
 ```
 
 ### Parameters
-* `page` - page number
-* `per_page` - number of results to show in one page of results (default 10, max 100)
+* `limit` - max number of results to show in one page of results (default 10, max 100).
+* `__nonce` - generated pagination nonce. Do not modify.
+* `__token` - generated pagination token. Do not modify.
 
 ### Example
 
@@ -88,10 +88,8 @@ Should result in this response:
 
 ```json
 {
-  "page": 1,
-  "total_pages": 1,
-  "per_page": 10,
-  "total": 2,
+  "next": "/api/v1/lists/11/people?__nonce=3OUjEzI6iyybc1F3sk6YrQ&__token=ADGvBW9wM69kUiss1KqTIyVeQ5M6OwiL6ttexRFnHK9m",
+  "prev": null,
   "results": [
     {
       "id": 9148,
